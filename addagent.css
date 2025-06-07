@@ -1,0 +1,228 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Layout structure */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0c1a2e;
+  color: white;
+  width: 240px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo img {
+  width: 200px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.menu li {
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a:hover {
+  color: #2c548b;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.sidebar a:hover {
+  color: #4012e6;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#toggleSidebar {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-right: 10px;
+}
+
+header input[type="text"] {
+  width: 250px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Page titles and buttons */
+.title {
+  color: #1f59cd;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-btn {
+  background-color: #1f59cd;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0033cc;
+}
+
+.search {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+thead {
+  background-color: #e7e7e7;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  word-break: break-word;
+}
+
+td i {
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search {
+    width: 100%;
+  }
+}

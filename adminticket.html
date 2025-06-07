@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Ticket | Qtech</title>
+  <link rel="stylesheet" href="adminticket.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo"><img src="img/logo.png" alt="Qtech Logo" /></div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Administrator</p>
+      </div>
+      <ul class="menu">
+        <li><a href="admindashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="adminticket.html" class="active"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="adminnotification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="adminprofile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="addagent.html"><i class="fas fa-users"></i> Agent</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" class="search-bar" placeholder="Search keyword..."/>
+        <div class="icons-right">
+          <div class="dropdown bell">
+            <i class="fas fa-bell"></i>
+            <div class="dropdown-menu">
+              <p>No new notifications</p>
+            </div>
+          </div>
+          <div class="dropdown profile">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="dashboard.html">User Side</a>
+              <a href="agent.html">Agent Side</a>
+              <a href="signin.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="tickets-section">
+        <h2>📋 List of Tickets</h2>
+        <div class="ticket-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Category</th>
+                <th>Priority</th>
+                <th>Created</th>
+                <th>Agent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ASD123456789</td>
+                <td>POS for Retail and F&B</td>
+                <td><span class="badge red">High</span></td>
+                <td>March 10, 2025</td>
+                <td class="assign-dropdown">
+                  Assigned to 
+                  <select>
+                    <option selected disabled></option>
+                    <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Chris Evans</option>
+                    <option>Mark Doe</option>
+                    <option>Ivan Nes</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>ASD987654321</td>
+                <td>QTech Utility Billing System</td>
+                <td><span class="badge green">Primary</span></td>
+                <td>March 23, 2025</td>
+                <td class="assign-dropdown">
+                  Assigned to 
+                  <select>
+                    <option selected disabled></option>
+                     <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Chris Evans</option>
+                    <option>Mark Doe</option>
+                    <option>Ivan Nes</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>ASD987654301</td>
+                <td>Qtech Inventory Support System</td>
+                <td><span class="badge grey">Normal</span></td>
+                <td>April 12, 2025</td>
+                <td class="assign-dropdown">
+                  Assigned to 
+                  <select>
+                    <option selected disabled></option>
+                     <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Chris Evans</option>
+                    <option>Mark Doe</option>
+                    <option>Ivan Nes</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>ASD987654302</td>
+                <td>qSA (Quick and Simple Accounting)</td>
+                <td><span class="badge red">High</span></td>
+                <td>April 20, 2025</td>
+                <td class="assign-dropdown">
+                  Assigned to 
+                  <select>
+                    <option selected disabled></option>
+                     <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Chris Evans</option>
+                    <option>Mark Doe</option>
+                    <option>Ivan Nes</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>ASD987654303</td>
+                <td>Philippine HR, Payroll and Time Keeping System</td>
+                <td><span class="badge green">Primary</span></td>
+                <td>April 28, 2025</td>
+                <td class="assign-dropdown">
+                  Assigned to 
+                  <select>
+                    <option selected disabled></option>
+                     <option>John Doe</option>
+                    <option>Jane Smith</option>
+                    <option>Chris Evans</option>
+                    <option>Mark Doe</option>
+                    <option>Ivan Nes</option>
+                  </select>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="adminticket.js"></script>
+</body>
+</html>

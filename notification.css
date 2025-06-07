@@ -1,0 +1,86 @@
+.notifications {
+  margin-top: 1rem;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-row h2 {
+  color: #0033cc;
+}
+
+.new-ticket-btn {
+  background-color: #0033cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.new-ticket-btn:hover {
+  background-color: #002299;
+}
+
+.notification-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.notification-table th, .notification-table td {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.notification-table tr:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.unresolved {
+  color: red;
+  font-weight: bold;
+}
+
+.resolved {
+  color: green;
+  font-weight: bold;
+}
+
+.ticket-link {
+  color: #0033cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ticket-link:hover {
+  text-decoration: underline;
+  color: #002299;
+}
+
+.sidebar a:hover {
+  color: #4012e6;
+}
+.profile {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile i {
+  font-size: 2rem;
+}
+
+.profile p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}

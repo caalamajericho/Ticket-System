@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Profile - Qtech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="adminprofile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Administrator</p>
+      </div>
+      <ul class="menu">
+        <li><a href="admindashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="adminticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="adminnotification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a class="active" href="adminprofile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="addagent.html"><i class="fas fa-users"></i> Agent</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <div class="dropdown">
+          <span><i class="fas fa-cog"></i></span>
+          <div class="dropdown-menu">
+            <a href="agent.html">Agent Side</a>
+            <a href="dashboard.html">User Side</a>
+            <label><input type="checkbox" id="darkToggle"/> Dark Theme</label>
+            <a href="signin.html">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- PROFILE SECTION -->
+      <section class="profile-section">
+        <h2>Profile</h2>
+        <p class="subtitle">Manage and protect your account</p>
+
+        <div class="profile-grid">
+          <!-- User Display Card -->
+          <div class="profile-card profile-user">
+            <i class="fas fa-user-circle fa-5x"></i>
+            <p>Administrator</p>
+            <p class="number">+63 9876543210</p>
+          </div>
+
+          <!-- Edit Form -->
+          <div class="profile-card profile-form">
+            <h3>Profile Details</h3>
+            <div class="form-row">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <input type="email" placeholder="Email" />
+            <div class="form-row">
+              <input type="text" placeholder="Contact Number" />
+              <input type="text" placeholder="Location" />
+            </div>
+          </div>
+
+          <!-- Static Info Card -->
+          <div class="profile-card personal-info">
+            <h3>Personal Information</h3>
+            <p><strong>Name:</strong> Administrator</p>
+            <p><strong>Email:</strong> administrator@gmail.com</p>
+            <p><strong>Location:</strong> Lorem Ipsum</p>
+            <p><strong>Mobile Number:</strong> +63 ********23</p>
+            <p><strong>Position:</strong> Lorem Ipsum</p>
+          </div>
+
+          <!-- Password Update -->
+          <div class="profile-card password-section">
+            <h3>Change Password</h3>
+            <div class="password-field">
+              <input type="password" placeholder="Current Password" />
+              <i class="fas fa-eye toggle-password"></i>
+            </div>
+            <div class="password-field">
+              <input type="password" placeholder="New Password" />
+              <i class="fas fa-eye toggle-password"></i>
+            </div>
+            <div class="password-field">
+              <input type="password" placeholder="Confirm Password" />
+              <i class="fas fa-eye toggle-password"></i>
+            </div>
+            <a href="admindashboard.html"><button class="submit-btn">Save Changes</button></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="adminprofile.js"></script>
+</body>
+</html>

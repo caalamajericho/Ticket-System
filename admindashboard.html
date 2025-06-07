@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qtech Admin Dashboard</title>
+  <link rel="stylesheet" href="admindashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Administrator</p>
+      </div>
+      <ul class="menu">
+        <li><a href="admindashboard.html" class="active"><i class="fas fa-home"></i> </i> Dashboard</a></li>
+        <li><a href="adminticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="adminnotification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="adminprofile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="addagent.html"><i class="fas fa-users"></i> Agent</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" class="search-bar" placeholder="Search keyword..."/>
+        <div class="icons-right">
+          <div class="dropdown bell">
+            <i class="fas fa-bell"></i>
+            <div class="dropdown-menu">
+              <p>No new notifications</p>
+            </div>
+          </div>
+          <div class="dropdown profile">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="dashboard.html">User Side</a>
+              <a href="agent.html">Agent Side</a>
+              <a href="signin.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="dashboard">
+        <h2>Dashboard</h2>
+        <div class="stats">
+          <div class="stat-box blue">
+            <h3>Unresolved Tickets</h3>
+            <p>100</p>
+          </div>
+          <div class="stat-box dark">
+            <h3>Resolved Tickets</h3>
+            <p>13,490</p>
+          </div>
+          <div class="stat-box blue">
+            <h3>Urgent Tickets</h3>
+            <p>3,671</p>
+          </div>
+        </div>
+
+        <div class="recent-tickets">
+          <h3>Recent Tickets</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Ticket ID</th>
+                <th>Category</th>
+                <th>Agent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>March 1, 2025</td><td>ASD123456789</td><td>POS for Retail and F&B</td><td>John Doe</td></tr>
+              <tr><td>March 1, 2025</td><td>ASD123456789</td><td>POS for Retail and F&B</td><td>Mark Doe</td></tr>
+              <tr><td>March 4, 2025</td><td>LOU785468123</td><td>qSA (Quick and Simple Accounting)</td><td>John Doe</td></tr>
+              <tr><td>March 11, 2025</td><td>LOU45621789</td><td>POS for Retail and F&B</td><td>Mark Doe</td></tr>
+              <tr><td>January 1, 2025</td><td>LOU126548795</td><td>POS for Retail and F&B</td><td>John Doe</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="admindashboard.js"></script>
+</body>
+</html>

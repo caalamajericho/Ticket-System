@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0c1a2e;
+  color: white;
+  width: 240px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo img {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu li {
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: padding-left 0.3s ease;
+}
+
+.menu a.active {
+  color: #1f59cd;
+}
+
+.menu a:hover {
+  padding-left: 10px;
+  color: #2c548b;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#toggleSidebar {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+header input[type="text"] {
+  width: 250px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.ticket-details h2 {
+  margin-bottom: 1rem;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.status-header select {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.description,
+.communication {
+  margin-bottom: 1.5rem;
+}
+
+.communication .message {
+  background: #f4f6fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.communication .message-input {
+  margin-top: 1rem;
+}
+
+.communication textarea {
+  width: 100%;
+  height: 80px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  background-color: #1f59cd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket-side-info {
+  margin-top: 2rem;
+}
+
+.ticket-side-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.ticket-side-info ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.ticket-side-info li {
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.status.in-progress {
+  background-color: #007bff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status.resolved {
+  background-color: #28a745;
+}
+
+.status.open {
+  background-color: #17a2b8;
+}
+
+.status.closed {
+  background-color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qtech - Agent Tickets</title>
+  <link rel="stylesheet" href="agentticket.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Agent</p>
+      </div>
+      <ul class="menu">
+        <li><a href="agent.html"><i class="fas fa-home"></i> </i> Dashboard</a></li>
+        <li><a href="agentticket.html"> <i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="agentprofile.html"> <i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" placeholder="Search keyword...">
+        <div class="icons">
+          <a href="notification.html"><i class="fas fa-bell"></i></a>
+          <div class="dropdown">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="admindashboard.html">Admin Side</a>
+              <a href="index.html">User Side</a>
+              <a href="profile.html">Profile</a>
+              <a href="signin.html">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="ticket-table">
+        <h2>POS for Retail and F&B</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ticket ID</th>
+              <th>Category</th>
+              <th>Priority</th>
+              <th>Agent</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody>
+  <tr>
+    <td><a href="sendticket.html">ASD123456789</a></td>
+    <td>POS for Retail and F&B</td>
+    <td><span class="badge high">High</span></td>
+    <td>John Doe</td>
+    <td>March 2, 2025</td>
+  </tr>
+  <tr>
+    <td><a href="sendticket.html">ASD987654321</a></td>
+    <td>POS for Retail and F&B</td>
+    <td><span class="badge primary">Primary</span></td>
+    <td>John Doe</td>
+    <td>March 3, 2025</td>
+  </tr>
+  <tr>
+    <td><a href="sendticket.html">ASD654123987</a></td>
+    <td>QSA (Quick and Simple Accounting)</td>
+    <td><span class="badge low">Low</span></td>
+    <td>Mark Doe</td>
+    <td>March 4, 2025</td>
+  </tr>
+</tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="agentticket.js"></script>
+</body>
+</html>

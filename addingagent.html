@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Agent - Qtech</title>
+  <link rel="stylesheet" href="addingagent.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Administrator</p>
+      </div>
+      <ul class="menu">
+        <li><a href="admindashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="adminticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="adminnotification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="adminprofile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="addagent.html" class="active"><i class="fas fa-users"></i> Agent</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" class="search-bar" placeholder="Search keyword..."/>
+        <div class="icons-right">
+          <div class="dropdown bell">
+            <i class="fas fa-bell"></i>
+            <div class="dropdown-menu">
+              <p>No new notifications</p>
+            </div>
+          </div>
+          <div class="dropdown profile">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="dashboard.html">User Side</a>
+              <a href="agent.html">Agent Side</a>
+              <a href="signin.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="add-agent">
+        <h2><span style="color:#007bff;">Add Agent</span></h2>
+        <p>Manage and protect your account</p>
+        <div class="form-container">
+          <div class="profile-card">
+            <i class="fas fa-user-circle profile-icon"></i>
+            <p>[Full Name]</p>
+            <p>+63</p>
+          </div>
+          <div class="form-box">
+            <h3>Profile Details</h3>
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Contact Number" required>
+                <select required>
+                  <option value="" disabled selected>Department</option>
+                  <option>Qtech Inventory Support System</option>
+                  <option>QTech Utility Billing System</option>
+                  <option>POS for Retail and F&B</option>
+                  <option>Philippine HR, Payroll and Time Keeping System</option>
+                  <option>qSA (Quick and Simple Accounting)</option>
+                </select>
+              </div>
+              <input type="email" placeholder="Email" required>
+              <div class="form-group">
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+              </div>
+              <button type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="addingagent.js"></script>
+</body>
+</html>

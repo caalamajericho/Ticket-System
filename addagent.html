@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qtech - Agent List</title>
+  <link rel="stylesheet" href="addagent.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <i class="fas fa-user-circle user-icon"></i>
+        <p>Administrator</p>
+      </div>
+      <ul class="menu">
+        <li><a href="admindashboard.html"><i class="fas fa-home"></i> </i> Dashboard</a></li>
+        <li><a href="adminticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="adminnotification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="adminprofile.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a class="active" href="addagent.html"><i class="fas fa-users"></i> Agent</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" placeholder="Search keyword...">
+        <div class="icons">
+          <i class="fas fa-bell"></i>
+          <div class="dropdown">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="agent.html">Agent Side</a>
+              <a href="dashboard.html">User Side</a>
+              <a href="signin.html">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="content">
+        <h2 class="title">Agent</h2>
+        <p class="subtitle">Manage agent account</p>
+        <div class="controls">
+          <a href="addingagent.html"><button class="add-btn"><i class="fas fa-plus"></i> Add Agent</button></a>
+          <input type="text" class="search" placeholder="Search keyword...">
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>johndoe@gmail.com</td>
+                <td>09876543210</td>
+                <td>bakihanma56</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>janesmith@gmail.com</td>
+                <td>09876543211</td>
+                <td>walter234</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr>
+              <tr>
+                <td>Chris Evans</td>
+                <td>chrisevans@gmail.com</td>
+                <td>09876543212</td>
+                <td>format304</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr>
+              <tr>
+                <td>Mark Doe</td>
+                <td>markdoe@gmail.com</td>
+                <td>09876543213</td>
+                <td>qwerty12</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr>
+              <tr>
+                <td>Ivan Nes</td>
+                <td>ivannes@gmail.com</td>
+                <td>09876543214</td>
+                <td>pogiako123</td>
+                <td><i class="fas fa-edit"></i></td>
+                <td><i class="fas fa-trash-alt"></i></td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="addagent.js"></script>
+</body>
+</html>

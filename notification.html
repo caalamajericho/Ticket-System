@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qtech Notification</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notification.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="profile">
+        <i class="fas fa-user-circle"></i>
+        <p>Customer</p>
+      </div>
+      <ul class="menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i>  Dashboard</a></li>
+        <li><a href="ticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="notification.html" class="active"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <div class="dropdown">
+          <span>⚙️</span>
+          <div class="dropdown-menu">
+            <a href="admindashboard.html">Admin Side</a>
+            <a href="agent.html">Agent Side</a>
+            <label><input type="checkbox" id="darkToggle"/> Dark Theme</label>
+            <a href="signin.html">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="notifications">
+        <div class="header-row">
+          <h2>Notification</h2>
+          <button class="new-ticket-btn">+ Create New Ticket</button>
+        </div>
+        <table class="notification-table">
+          <thead>
+            <tr>
+              <th>Ticket ID</th>
+              <th>Category</th>
+              <th>Issue</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td><a href="ticket-details.html" class="ticket-link">ASD123456789</a></td>
+              <td>POS for Retail and F&B</td>
+              <td>Payment terminal not processing ...</td>
+              <td class="unresolved">Unresolved</td>
+            </tr>
+            <tr>
+              <td><a href="ticket-details.html" class="ticket-link">ASD987654321</a></td>
+              <td>POS for Retail and F&B</td>
+              <td>Payment terminal not processing ...</td>
+              <td class="resolved">Resolved</td>
+            </tr>
+            <tr>
+              <td><a href="ticket-details.html" class="ticket-link">ASD654123987</a></td>
+              <td>qSA (Quick and Simple Accounting)</td>
+              <td>Payment terminal not processing ...</td>
+              <td class="resolved">Resolved</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+  <script src="notification.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agent Dashboard | Qtech</title>
+  <link rel="stylesheet" href="agentdashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="agent-info">
+        <i class="fas fa-user-circle"></i>
+        <p>Agent</p>
+      </div>
+      <ul class="menu">
+        <li><a href="agentdashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="ticket.html"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="notification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <input type="text" placeholder="Search keyword..."/>
+        <div class="icons-right">
+          <div class="notification">
+            <i class="fas fa-bell"></i>
+            <div class="notif-dropdown">
+              <p>No new notifications</p>
+            </div>
+          </div>
+          <div class="dropdown">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="agent.html">Agent Side</a>
+            <a href="index.html">User Side</a>
+              <label><input type="checkbox" id="darkToggle"/> Dark Mode</label>
+              <a href="signin.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <br class="ticket-section">
+        <h1>Hi Agent!</h1>
+        <h3>Here is your assigned ticket!</h3>
+        <br></br>
+        <div class="ticket-card">
+          <img src="img/pos.png" alt="POS system image" />
+          <div class="ticket-info">
+            <h3><i class="fas fa-cash-register"></i> POS for Retail and F&B</h3>
+            <p><i class="fas fa-tools"></i> Service / IT Management Solution</p>
+            <a href="ticket-details.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="agentdashboard.js"></script>
+</body>
+</html>

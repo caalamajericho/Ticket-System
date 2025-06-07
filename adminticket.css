@@ -1,0 +1,75 @@
+/* Use same base styling as admindashboard.css */
+@import url('admindashboard.css');
+
+.tickets-section {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tickets-section h2 {
+  color: #1d2d5a;
+  margin-bottom: 1rem;
+}
+
+.ticket-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-table th, .ticket-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.ticket-table tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.badge.red {
+  background-color: #dc3545;
+}
+
+.badge.green {
+  background-color: #28a745;
+}
+
+.badge.grey {
+  background-color: #5f615f;
+}
+
+
+.assign-dropdown select {
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.assign-dropdown select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticket-table th, .ticket-table td {
+    font-size: 0.9rem;
+  }
+
+  .assign-dropdown select {
+    width: 100%;
+    margin-top: 4px;
+  }
+}

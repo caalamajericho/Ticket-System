@@ -1,0 +1,96 @@
+.profile {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile i {
+  font-size: 2rem;
+}
+
+.profile p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.create-ticket {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.create-ticket h2 {
+  color: #0033cc;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+#ticketForm {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row input, .form-row select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.upload-photo {
+  border: 2px dashed #ccc;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #777;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-photo:hover {
+  border-color: #0033cc;
+}
+
+.upload-photo input[type="file"] {
+  display: none;
+}
+
+.submit-btn {
+  background-color: #0033cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #002299;
+}
+
+.sidebar a:hover {
+  color: #4012e6;
+}

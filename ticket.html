@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Ticket - Qtech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ticket.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="profile">
+        <i class="fas fa-user-circle"></i>
+        <p>Customer</p>
+      </div>
+      <ul class="menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i>  Dashboard</a></li>
+        <li><a href="ticket.html" class="active"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="notification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <div class="dropdown">
+          <span>⚙️</span>
+          <div class="dropdown-menu">
+            <a href="admindashboard.html">Admin Side</a>
+            <a href="agent.html">Agent Side</a>
+            <label><input type="checkbox" id="darkToggle"/> Dark Theme</label>
+            <a href="signin.html">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="create-ticket">
+        <h2>Create Ticket</h2>
+        <p class="subtitle">Write and address new queries and issues</p>
+        <form id="ticketForm">
+          <div class="form-row">
+            <input type="email" placeholder="Type Email" required />
+            <select required>
+              <option value="" disabled selected>Choose Type</option>
+              <option value="pos">Qtech Inventory Support System</option>
+              <option value="pos">QTech Utility Billing System</option>
+              <option value="pos">POS for Retail and F&B</option>
+              <option value="pos">Philippine HR, Payroll and Time Keeping System</option>
+              <option value="qsa">qSA (Quick and Simple Accounting)</option>
+            </select>
+          </div>
+          <textarea placeholder="Type ticket issue here.." required></textarea>
+          <div class="upload-photo">
+            <label for="uploadFile">
+              <i class="fas fa-cloud-upload-alt"></i><br />
+              Upload Photo
+            </label>
+            <input type="file" id="uploadFile" accept="image/*" />
+          </div>
+          <button type="submit" class="submit-btn">Send Ticket</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="ticket.js"></script>
+</body>
+</html>

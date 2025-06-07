@@ -1,0 +1,115 @@
+.notification-section {
+  margin: 2rem 1rem;
+}
+
+.notification-section h2 {
+  color: #0033cc;
+  margin-bottom: 1rem;
+}
+
+.table-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-table th, .ticket-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.ticket-table a {
+  text-decoration: none;
+  color: #0033cc;
+  font-weight: bold;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: white;
+  background-color: gray;
+}
+
+.badge.high {
+  background-color: #f44336;
+}
+
+.badge.primary {
+  background-color: #4caf50;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Layout structure */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0c1a2e;
+  color: white;
+  width: 240px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo img {
+  width: 200px;
+  height: 80px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem;
+}
+
+.user-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+}
+
+
+.menu li {
+  list-style: none;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a:hover {
+  color: #2c548b;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.sidebar a:hover {
+  color: #4012e6;
+}

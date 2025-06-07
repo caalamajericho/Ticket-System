@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qtech Customer Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="profile">
+        <i class="fas fa-user-circle"></i>
+        <p>Customer</p>
+      </div>
+      <ul class="menu">
+       <li><a href="dashboard.html"> <i class="fas fa-home"></i>  Dashboard</a></li>
+        <li><a href="ticket.html"> <i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="notification.html"> <i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="profile.html"> <i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <div class="dropdown">
+          <span>⚙️</span>
+          <div class="dropdown-menu">
+            <a href="admindashboard.html">Admin Side</a>
+            <a href="agent.html">Agent Side</a>
+            <label><input type="checkbox" id="darkToggle"/> Dark Theme</label>
+            <a href="signin.html">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Welcome Banner -->
+      <section class="welcome-banner">
+        <div class="banner-content">
+          <h2>Welcome Customer01!</h2>
+          <p>Your concerns matter. Submit a ticket, and we'll handle the rest!</p>
+           <a href="ticket.html"><button class="submit-ticket"><i class="fas fa-ticket-alt"></i> Submit New Ticket</button></a>
+          <a href="ticket.html"><button class="create-ticket"><i class="fas fa-plus"></i> Create New Ticket</button></a>
+        </div>
+        <div class="banner-image">
+          <img src="img/signup.jpg" alt="Support Image" class="signup-img">
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h3>FAQs</h3>
+        <h2>Ask us anything</h2>
+        <p>Have any questions? We're here to assist you.</p>
+        <div class="search-box">
+          <input type="text" id="faqSearch" placeholder="Search here">
+        </div>
+        <div class="faq-grid" id="faqList">
+          <div class="faq-item">
+            <i class="fas fa-envelope"></i>
+            <h4>How do I change my account email?</h4>
+            <p>You can log in and change it from Profile > Edit Profile.</p>
+          </div>
+          <div class="faq-item">
+            <i class="fas fa-credit-card"></i>
+            <h4>What should I do if my payment fails?</h4>
+            <p>Use COD if available or retry. Failed payments will be refunded within 7-10 days.</p>
+          </div>
+          <div class="faq-item">
+            <i class="fas fa-ban"></i>
+            <h4>What is your cancellation policy?</h4>
+            <p>You may cancel an order within 1 hr in processing state. Refunds go to original method.</p>
+          </div>
+          <div class="faq-item">
+            <i class="fas fa-truck"></i>
+            <h4>How do I check order delivery status?</h4>
+            <p>Check "My Orders" in the app or website to view delivery status.</p>
+          </div>
+          <div class="faq-item">
+            <i class="fas fa-dollar-sign"></i>
+            <h4>What is Instant Refunds?</h4>
+            <p>Upon successful pickup, you may instantly receive a refund.</p>
+          </div>
+          <div class="faq-item">
+            <i class="fas fa-pen"></i>
+            <h4>Can I update my ticket after submitting it?</h4>
+            <p>Yes, through comments or attachments. Some details may not be editable.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

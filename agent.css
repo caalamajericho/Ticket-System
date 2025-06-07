@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #0c1a2e;
+  color: white;
+  width: 240px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar .logo img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu li {
+  list-style: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a.active {
+  color: #1f59cd;
+}
+
+.menu a:hover {
+  padding-left: 10px;
+  color: #2c548b;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#toggleSidebar {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+header input[type="text"] {
+  width: 250px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #f4f6fa;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #1f59cd;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-list .ticket {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 5px solid #1f59cd;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  position: relative;
+}
+
+.ticket h4 {
+  margin-bottom: 0.3rem;
+}
+
+.ticket .status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.status.open {
+  background-color: #007bff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status.resolved {
+  background-color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}

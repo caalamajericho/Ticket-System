@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="ticket-details.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+       <div class="profile">
+        <i class="fas fa-user-circle"></i>
+        <p>Customer</p>
+      </div>
+      <ul class="menu">
+        <li><a href="dashboard.html"><i class="fas fa-home"></i>  Dashboard</a></li>
+        <li><a href="ticket.html" class="active"><i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="notification.html"><i class="fas fa-bell"></i> Notification</a></li>
+        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <button id="toggleSidebar">☰</button>
+        <div class="dropdown">
+          <span>⚙️</span>
+          <div class="dropdown-menu">
+            <a href="admindashboard.html">Admin Side</a>
+            <a href="agent.html">Agent Side</a>
+            <label><input type="checkbox" id="darkToggle"/> Dark Theme</label>
+            <a href="signin.html">Log Out</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="ticket-details-section">
+        <div class="header-row">
+          <h2><i class="fas fa-ticket-alt"></i> Ticket Details</h2>
+          <a href="ticket.html"><button class="new-ticket-btn">+ Create New Ticket</button></a>
+        </div>
+
+        <div class="ticket-card">
+          <div class="ticket-info-grid">
+            <div><strong>Ticket ID</strong><br><span id="ticket-id">ASD123456789</span></div>
+            <div><strong>Created</strong><br>March 2, 2025 | 09:02 AM</div>
+            <div><strong>Customer Name</strong><br>Juan Dela Cruz</div>
+            <div><strong>Status</strong><br><span class="unresolved">Unresolved</span></div>
+          </div>
+
+          <div class="ticket-description">
+            <strong>Issue Description</strong>
+            <p>Payment terminal not processing transactions</p>
+          </div>
+
+          <div class="ticket-timeline">
+            <strong>Timeline</strong>
+            <ul>
+              <li><i class="fas fa-dot-circle"></i> Initial Response - March 2, 2025 | 9:02 AM</li>
+              <li><i class="fas fa-dot-circle"></i> Technical Assigned - March 2, 2025 | 9:15 AM</li>
+            </ul>
+          </div>
+
+          <div class="ticket-attachments">
+            <strong>Attachments</strong>
+            <ul>
+              <li><i class="fas fa-file-alt"></i> Error.log.png</li>
+              <li><i class="fas fa-file-alt"></i> Screenshot.png</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="ticket-details.js"></script>
+</body>
+</html>

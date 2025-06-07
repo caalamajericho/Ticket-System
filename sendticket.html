@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Send Ticket - Qtech</title>
+  <link rel="stylesheet" href="sendticket.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Qtech Logo" />
+      </div>
+      <div class="user-info">
+        <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+        <p>Agent</p>
+      </div>
+      <ul class="menu">
+        <li><a href="agent.html"><i class="fas fa-home"></i> </i> Dashboard</a></li>
+        <li><a href="agentticket.html"> <i class="fas fa-ticket-alt"></i> Tickets</a></li>
+        <li><a href="agentprofile.html"> <i class="fas fa-user"></i> Profile</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <button id="toggleSidebar"><i class="fas fa-bars"></i></button>
+        <input type="text" placeholder="Search keyword..." />
+        <div class="icons">
+          <a href="agentticket.html"><i class="fas fa-bell"></i></a>
+          <div class="dropdown">
+            <i class="fas fa-user-circle"></i>
+            <div class="dropdown-menu">
+              <a href="agent.html">Agent Side</a>
+              <a href="index.html">User Side</a>
+              <a href="profile.html">Profile</a>
+              <a href="signin.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="ticket-details">
+        <h2>Ticket #ASD123456789 - Balance Sheet Miscalculation</h2>
+        <div class="status-header">
+          <span class="badge status in-progress">In Progress</span>
+          <select id="statusSelect">
+            <option value="Pending">Pending</option>
+            <option value="Resolved">Resolved</option>
+            <option value="Open" selected>Open</option>
+            <option value="Closed">Closed</option>
+          </select>
+        </div>
+
+        <section class="description">
+          <h3>Description</h3>
+          <p>The balance sheet calculation shows discrepancies in the Q4 2024 report. Numbers don't match with the actual bank statements and need immediate attention.</p>
+        </section>
+
+        <section class="communication">
+          <h3>Communication</h3>
+          <div class="message from-user">
+            <strong>John Smith</strong> <span class="time">2 hours ago</span>
+            <p>I’ve reviewed the calculations and found that the discrepancy might be due to…</p>
+          </div>
+          <div class="message from-support">
+            <strong>Support Team</strong> <span class="time">1 hour ago</span>
+            <p>Thank you for the detailed explanation. We’ll investigate this right away…</p>
+          </div>
+          <div class="message-input">
+            <textarea placeholder="Type your message..."></textarea>
+            <div class="actions">
+              <label><i class="fas fa-paperclip"></i></label>
+              <button>Send Message</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="ticket-side-info">
+          <div class="timeline">
+            <h3>Timeline</h3>
+            <ul>
+              <li><strong>Ticket Created:</strong> Jan 15, 2025 - 10:30 AM</li>
+              <li><strong>First Response:</strong> Jan 15, 2025 - 11:15 AM</li>
+              <li><strong>Status Updated:</strong> Jan 15, 2025 - 2:45 PM</li>
+            </ul>
+          </div>
+
+          <div class="attachments">
+            <h3>Attachments</h3>
+            <ul>
+              <li><a href="#">Q4_Balance_Sheet.pdf</a></li>
+              <li><a href="#">Screenshot_Error.png</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="sendticket.js"></script>
+</body>
+</html>
